@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Cogniplex AI Chatbot</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <header>
+        <h1>Cogniplex AI Chatbot</h1>
+    </header>
+    <div class="container">
+        <h2>How can I help you Today?</h2>
+        <div class="chat-window" id="chat-window">
+        </div>
+
+        <div class="input-area">
+            <input type="text" id="chat-input" placeholder="Ask me anything..." autocomplete="off">
+            <button id="send-btn">Send</button>
+        </div>
+
+        <div class="controls-area">
+            <div class="control-group">
+                <h3>Document Analysis (RAG)</h3>
+                <button id="doc-upload-btn">Upload PDF</button>
+                <input type="file" id="doc-upload" accept=".pdf" style="display:none;">
+                <label>
+                    <input type="checkbox" id="rag-checkbox"> Use Document Knowledge
+                </label>
+            </div>
+            <div class="control-group">
+                <h3>Media Analysis</h3>
+                <input type="text" id="media-query" placeholder="What about this image?">
+                <button id="media-analyze-btn">Upload & Analyze Media</button>
+                <input type="file" id="media-upload" accept="image/*" style="display:none;">
+            </div>
+        </div>
+
+        <div id="loading-indicator" class="hidden">Processing...</div>
+    </div>
+    <script src="script.js"></script>
+</body>
+</html>
